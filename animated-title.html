@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👾-------------------------</title>
+    <style>
+        body {
+            background: black;
+            min-width: 100vw;
+            min-height: 100vh;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+ 
+msg = document.title;
+msg = msg + "-";
+position = 0;
+
+function scrolltitle() {
+  document.title = msg.substring(position, msg.length) + msg.substring(0, position);
+  position++;
+  if(position > msg.length) position = 0;
+  window.setTimeout(scrolltitle, 60);
+}
+scrolltitle();
+
+    </script>
+</body>
+</html>
